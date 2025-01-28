@@ -18,9 +18,9 @@ import { ClientRouter } from "astro:transitions";
   </head>
   <body>
     <Navbar />
-    <main>
+    <main class="bg-gradient-to-r from-black via-purple-950 to-black">
       <slot />
     </main>
-    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js" defer></script>
   </body>
 </html>

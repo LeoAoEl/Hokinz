@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import image from "@assets/image.webp";
+import Container from "@components/shared/Container.astro";
+---
+
+<section class="py-16">
+  <Container>
+    <!-- Header Section -->
+    <div class="items-center justify-center text-center mb-8">
+      <h2 class="text-5xl font-bold text-blanco mb-6">About Us</h2>
+      <p class="text-lg text-blanco/80 mb-6">
+        As a Web Development Services, we are committed to building custom web
+        solutions that drive business success.
+      </p>
+    </div>
+    <!-- Content Section -->
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+      <!-- Image Section -->
+      <div class="w-full max-w-sm md:max-w-xs mb-8 md:w-1/2">
+        <Image
+          src={image}
+          alt="About Us Image"
+          class="rounded-lg shadow-lg w-full h-auto"
+          sizes="(max-width: 1024px) 50vw, 25vw"
+          width={300}
+          height={450}
+        />
+      </div>
+      <!-- Text Section -->
+      <div
+        class="text-center lg:text-left space-y-6 w-full flex flex-col md:w-1/2"
+      >
+        <p class="text-lg text-blanco/80">
+          At our web development agency, we specialize in crafting bespoke
+          online solutions tailored to elevate businesses toward their digital
+          objectives. Committed to continuous evolution, we remain abreast of
+          cutting-edge web technologies and trends, ensuring a constant delivery
+          of unparalleled excellence.
+        </p>
+        <p class="text-lg text-blanco/80">
+          Our ethos is rooted in equipping clients with the essential tools for
+          triumph in the digital realm. We firmly believe in furnishing every
+          business with a digital presence that authentically embodies their
+          brand essence and effectively resonates with their target demographic.
+        </p>
+        <a
+          href="#contact"
+          class="inline-block bg-blanco mx-auto text-lightPurple px-6 py-3 rounded-lg hover:bg-lightPurple hover:text-blanco transition-all ease-in duration-300"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  name: string;
+  route: string;
+  image: ImageMetadata;
+  role: string;
+}
+const { name, route, image, role } = Astro.props;
+---
+
+<a
+  href={route}
+  target="_blank"
+  class="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full transition-all hover:scale-105 ease-in-out group"
+>
+  <div class="relative mb-5">
+    <Image
+      src={image}
+      alt="Marvin image"
+      class="w-28 h-28 rounded-2xl object-cover mx-auto ransition-all duration-500 border-2 border-solid border-transparent group-hover:border-lightPurple"
+    />
+  </div>
+  <h4
+    class="text-xl text-lightPurple font-semibold text-center mb-2 transition-all duration-500 group-hover:text-purple-600"
+  >
+    {name}
+  </h4>
+  <span
+    class="text-blanco/50 text-center block transition-all duration-500 group-hover:text-blanco/80"
+    >{role}</span
+  >
+</a>

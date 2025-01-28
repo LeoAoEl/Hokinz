@@ -1,0 +1,32 @@
+---
+import Container from "@components/shared/Container.astro";
+import ProfileCard from "./ProfileCard.astro";
+import { OurTeam } from "@constants/team";
+---
+
+<section class="pb-16">
+  <Container>
+    <div class="mb-8">
+      <h2 class="font-manrope text-5xl text-center font-bold text-blanco mb-6">
+        Conoce nuestro equipo
+      </h2>
+      <p class="text-lg text-blanco/70 text-center">
+        These people work on making our product best.
+      </p>
+    </div>
+    <div
+      class="flex flex-wrap justify-center gap-y-14 max-w-3xl mx-auto lg:max-w-full"
+    >
+      {
+        OurTeam.map((member) => (
+          <ProfileCard
+            name={member.name}
+            role={member.role}
+            image={member.image}
+            route={member.route}
+          />
+        ))
+      }
+    </div>
+  </Container>
+</section>
