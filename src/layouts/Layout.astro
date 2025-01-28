@@ -1,0 +1,26 @@
+---
+import Navbar from "@components/shared/Navbar.astro";
+import { ClientRouter } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <ClientRouter />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo.avif" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Hokinz</title>
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+  </body>
+</html>

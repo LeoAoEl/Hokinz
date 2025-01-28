@@ -1,0 +1,35 @@
+---
+import Container from "@components/shared/Container.astro";
+import imagen from "@assets/image.webp";
+import Cards from "@components/shared/Cards.astro";
+---
+
+<div class="bg-gradient-to-b from-black to-purple-800 py-16">
+  <Container
+    className=" flex gap-8 flex-col items-center justify-center  md:flex-row"
+  >
+    <Cards
+      title="Parents"
+      subtitle="Peace of mind"
+      description="Our solutions provide digital youth with access, enabling their participation in platforms and services where they were previously invisible, in a manner that is both safe and empowering."
+      image={imagen}
+      bgColor="bg-[#e3dff7]"
+      buttonName="Family Platform"
+      buttonPath="#"
+    />
+
+    <Cards
+      title="Developers"
+      subtitle="Complieance"
+      description="Our solutions provide digital youth with access, enabling their participation in platforms and services where they were previously invisible, in a manner that is both safe and empowering."
+      image={imagen}
+      buttonName="Developer Platform"
+      buttonPath="#"
+      bgColor="bg-[#6720c9]"
+      borderColor=" border-blanco/60"
+      titleColor="text-blanco"
+      descriptionColor="text-blanco"
+      subtitleColor="text-blanco/80"
+    />
+  </Container>
+</div>

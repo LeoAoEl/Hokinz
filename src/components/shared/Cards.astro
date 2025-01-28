@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  description: string;
+  image: ImageMetadata;
+  buttonPath?: string;
+  buttonName?: string;
+  bgColor?: string;
+  descriptionColor?: string;
+  titleColor?: string;
+  subtitleColor?: string;
+  borderColor?: string;
+}
+
+const {
+  title,
+  subtitle,
+  description,
+  image,
+  buttonName,
+  buttonPath,
+  bgColor = "bg-purple-900",
+  descriptionColor = "text-purple-950",
+  titleColor = "text-lightPurple",
+  subtitleColor = "text-lightPurple",
+  borderColor = "border-lightPurple",
+} = Astro.props;
+---
+
+<section class={`p-6 ${bgColor} rounded-lg shadow-2xl`}>
+  <div class="p-8 text-blanco">
+    <div
+      class={`flex flex-col border-t-2 ${borderColor} md:flex-row items-start md:items-center justify-between mb-4 rounded-sm`}
+    >
+      <span
+        class={`text-2xl text-center md:text-left md:text-3xl font-bold ${titleColor}`}
+      >
+        {title}
+      </span>
+      {
+        subtitle && (
+          <span
+            class={`text-xs sm:text-center md:text-base md:ml-4 px-8 md:border-l-2 ${borderColor} ${subtitleColor}`}
+          >
+            {subtitle}
+          </span>
+        )
+      }
+    </div>
+    <p class={`${descriptionColor}`}>
+      {description}
+    </p>
+  </div>
+
+  <div
+    class="relative mt-2 group flex flex-col items-center px-8 justify-center text-center"
+  >
+    <Image
+      src={image}
+      alt={title}
+      quality="mid"
+      loading="lazy"
+      format="avif"
+      class="rounded-lg shadow-2xl w-full h-auto md:h-96 object-cover transform transition-transform duration-300 group-hover:scale-105"
+    />
+    {
+      buttonName && buttonPath && (
+        <a
+          href={buttonPath}
+          class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-blanco text-purple-950 px-6 py-2 rounded-lg hover:bg-blanco/80 transition-colors duration-300"
+        >
+          {buttonName}
+        </a>
+      )
+    }
+  </div>
+</section>

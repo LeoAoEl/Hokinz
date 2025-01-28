@@ -1,0 +1,45 @@
+---
+import Container from "@components/shared/Container.astro";
+import { Image } from "astro:assets";
+import image from "@assets/image.webp";
+---
+
+<section
+  class="bg-gradient-to-r from-black via-purple-950 to-black py-16 relative"
+>
+  <Container>
+    <div
+      class="flex flex-col md:flex-row items-center md:items-center justify-center gap-8 bg-purple-900 p-8 rounded-lg shadow-2xl text-blanco"
+    >
+      <div class="md:w-1/2 relative items-center justify-center">
+        <div
+          class="mb-8 border-blanco/40 border-t-2 rounded-sm flex-row flex items-center justify-evenly"
+        >
+          <span class="block text-2xl md:text-3xl font-bold w-2/3 md:w-3/4"
+            >Kids & Teens</span
+          >
+          <span
+            class="block text-purple-300 md:ml-4 px-8 w-1/3 md:w-1/4 border-blanco/40 border-l-2"
+            >safety only</span
+          >
+        </div>
+        <p class="text-purple-100">
+          Our solutions provide digital youth with access, enabling their
+          participation in platforms and services where they were previously
+          invisible, in a manner that is both safe and empowering.
+        </p>
+      </div>
+
+      <div class="md:w-1/2 relative md:-mt-32 lg:-mt-40">
+        <Image
+          src={image}
+          alt="Prueba"
+          quality="mid"
+          loading="lazy"
+          format="avif"
+          class="rounded-lg shadow-2xl w-full h-auto md:h-96 object-cover"
+        />
+      </div>
+    </div>
+  </Container>
+</section>

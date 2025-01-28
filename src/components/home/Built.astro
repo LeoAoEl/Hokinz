@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import image from "@assets/image.webp";
+import Container from "@components/shared/Container.astro";
+---
+
+<section class="bg-gradient-to-r from-black via-purple-950 to-black py-16">
+  <Container
+    className=" flex flex-col lg:flex-row items-center justify-between"
+  >
+    <div class="text-center lg:text-left lg:w-1/2">
+      <h1 class="text-6xl font-bold text-blanco">
+        <span class="block">Built for</span>
+        <span class="block text-lightPurple">Everyone</span>
+      </h1>
+      <p class="mt-4 text-lg text-purple-200">
+        From developers to players to parents
+      </p>
+      <p class="mt-6 text-purple-100">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis at
+        distinctio dolore ullam recusandae! Ullam obcaecati aut a cupiditate
+        libero. distinctio dolore ullam recusandae! Ullam obcaecati aut a
+        cupiditate libero.
+      </p>
+    </div>
+
+    <div
+      class="mt-10 lg:mt-0 lg:w-1/2 flex flex-col gap-4 text-blanco text-center border-blanco/10 border rounded-xl p-4 items-center justify-center"
+    >
+      <Image
+        src={image}
+        alt="Prueba"
+        quality="mid"
+        loading="lazy"
+        format="avif"
+        class="rounded-lg shadow-2xl h-full md:h-60 w-full md:w-fit"
+      />
+      <span
+        >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod,
+        asperiores?</span
+      >
+    </div>
+  </Container>
+</section>
