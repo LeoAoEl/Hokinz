@@ -1,0 +1,48 @@
+---
+import Container from "@components/shared/Container.astro";
+import { Image } from "astro:assets";
+import image from "@assets/image.webp";
+---
+
+<section
+  class="min-h-screen flex flex-col justify-center items-center bg-cover bg-center"
+  style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/src/assets/image.webp');"
+>
+  <Container>
+    <!-- Título y Subtítulo -->
+    <div class="text-center mb-8 flex flex-col items-center">
+      <h1 class="text-7xl font-bold text-blanco">
+        Save the<br />Innovation
+      </h1>
+      <p class="text-lg text-lightPurple mt-4">
+        Seamlessly navigate global compliance for kids and teens
+      </p>
+    </div>
+
+    <!-- Card -->
+    <div class="bg-fondo p-6 rounded-lg shadow-lg max-w-md w-full">
+      <div
+        class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4"
+      >
+        <!-- Imagen -->
+        <div class="flex-shrink-0">
+          <Image
+            src={image}
+            alt="Solution Image"
+            class="w-24 h-24 rounded-full"
+          />
+        </div>
+
+        <!-- Texto y Botón -->
+        <div class="flex-1 text-center md:text-left flex items-center flex-col">
+          <p class="text-blanco">Ready to see our solution in action?</p>
+          <button
+            class="mt-4 bg-lightPurple text-blanco px-6 py-2 rounded-lg hover:bg-aFondo transition-colors"
+          >
+            BOOK4DRAG
+          </button>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

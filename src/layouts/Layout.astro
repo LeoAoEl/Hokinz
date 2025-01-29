@@ -1,5 +1,7 @@
 ---
+import Footer from "@components/shared/Footer.astro";
 import Navbar from "@components/shared/Navbar.astro";
+import ScrollToTop from "@components/ScrollTop";
 import { ClientRouter } from "astro:transitions";
 ---
 
@@ -18,9 +20,13 @@ import { ClientRouter } from "astro:transitions";
   </head>
   <body>
     <Navbar />
-    <main class="bg-gradient-to-r from-black via-purple-950 to-black">
+    <main
+      class="bg-gradient-to-r from-black via-purple-950 to-black scroll-smooth transition-all ease-in-out"
+    >
       <slot />
     </main>
+    <Footer />
+    <ScrollToTop client:load />
     <script src="https://unpkg.com/taos@1.0.5/dist/taos.js" defer></script>
   </body>
 </html>
