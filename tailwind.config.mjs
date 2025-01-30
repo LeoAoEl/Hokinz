@@ -18,10 +18,6 @@ export default {
         fondo: "#18092d",
         aFondo: "#7850ca",
       },
-      backgroundImage: {
-        homeBanner:
-          "linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/src/assets/image.webp')",
-      },
     },
   },
   plugins: [require("taos/plugin")],
