@@ -10,15 +10,15 @@ import { OurTeam } from "@constants/team";
 >
   <Container>
     <div class="mb-8">
-      <h2 class="font-manrope text-5xl text-center font-bold text-blanco mb-6">
+      <h2 class="text-4xl md:text-6xl text-center font-bold text-blanco mb-6">
         Conoce nuestro equipo
       </h2>
-      <p class="text-lg text-blanco/70 text-center">
+      <p class="text-base text-blanco/70 text-center">
         These people work on making our product best.
       </p>
     </div>
     <div
-      class="flex flex-wrap justify-center gap-y-14 max-w-3xl mx-auto lg:max-w-full"
+      class="grid grid-cols-2 gap-6 md:flex md:flex-wrap md:justify-center md:gap-y-14 max-w-3xl mx-auto lg:max-w-full"
     >
       {
         OurTeam.map((member) => (
