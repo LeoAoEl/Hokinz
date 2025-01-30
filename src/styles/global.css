@@ -1,0 +1,7 @@
+/* src/styles/global.css */
+.background-image {
+  background-image: url("/images/image.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

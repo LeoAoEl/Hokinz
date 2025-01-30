@@ -5,10 +5,11 @@ import { Image } from "astro:assets";
 import logo2 from "@assets/logo.avif";
 import { navbarRoutes } from "@constants/rutas";
 import Container from "./Container.astro";
+import "@styles/global.css";
 ---
 
 <div
-  class="md:bg-fixed w-full h-[80vh] md:h-screen bg-homeBanner bg-cover transition-all ease-in-out overflow-hidden bg-center"
+  class="background-image md:bg-fixed w-full h-[80vh] md:h-screen transition-all ease-in-out overflow-hidden"
 >
   <StickyHeader
     class="gap-6 z-20 transition-all w-full ease-in-out bg-transparent top-0"
